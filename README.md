@@ -1,6 +1,6 @@
 # Basic Chatbot Project
 
-This project is a basic chatbot built using `pydantic-ai` and `groq`. The chatbot includes session-based memory and a system prompt.
+This project is a basic chatbot built using `pydantic-ai` and `groq`. The chatbot includes session-based memory and a system prompt. It also has two tools, websearch and rolldie.
 
 ## Project Structure
 
@@ -10,6 +10,7 @@ This project is a basic chatbot built using `pydantic-ai` and `groq`. The chatbo
 - `pyproject.toml`: Project configuration file.
 - `README.md`: Project documentation file.
 - `test.py`: Main script for the chatbot.
+- `search.py`: A script to test tavily.
 
 ## Requirements
 
@@ -49,6 +50,7 @@ This project is a basic chatbot built using `pydantic-ai` and `groq`. The chatbo
 
     ```env
     GROQ_API_KEY=<your-groq-api-key>
+    TAVILY_API_KEY=<your-tavily-api-key>
     ```
 
 ## Usage
