@@ -22,8 +22,8 @@ This project is a basic chatbot built using `pydantic-ai` and `groq`. The chatbo
 1. Clone the repository:
 
     ```sh
-    git clone <repository-url>
-    cd <repository-directory>
+    git clone https://github.com/Rikhil-Nell/BasicBot.git
+    cd BasicBot
     ```
 
 2. Create a virtual environment:
@@ -39,6 +39,12 @@ This project is a basic chatbot built using `pydantic-ai` and `groq`. The chatbo
     pip install -r requirements.txt
     ```
 
+    OR
+
+    ```sh
+    uv sync
+    ```
+
 4. Set up the environment variables in the [.env](http://_vscodecontentref_/0) file:
 
     ```env
@@ -47,7 +53,7 @@ This project is a basic chatbot built using `pydantic-ai` and `groq`. The chatbo
 
 ## Usage
 
-Run the  scriptchatbot:
+Run the chatbot:
 
 ```sh
 python test.py
