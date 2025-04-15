@@ -11,12 +11,14 @@ This project is a basic chatbot built using `pydantic-ai` and `groq`. The chatbo
 - `README.md`: Project documentation file.
 - `test.py`: Main script for the chatbot.
 - `search.py`: A script to test tavily.
+- `app.py`: Streamlit frontend for the chatbot.
 
 ## Requirements
 
 - Python 3.13 or higher
 - `pydantic-ai` version 0.0.24 or higher
 - `python-dotenv` version 1.0.1 or higher
+- `streamlit` version 1.0.0 or higher
 
 ## Installation
 
@@ -46,7 +48,7 @@ This project is a basic chatbot built using `pydantic-ai` and `groq`. The chatbo
     uv sync
     ```
 
-4. Set up the environment variables in the [.env](http://_vscodecontentref_/0) file:
+4. Set up the environment variables in the `.env` file:
 
     ```env
     GROQ_API_KEY=<your-groq-api-key>
@@ -59,3 +61,10 @@ Run the chatbot:
 
 ```sh
 python test.py
+```
+
+Run the Streamlit app:
+
+```sh
+streamlit run app.py
+```
