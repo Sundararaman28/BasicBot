@@ -6,22 +6,22 @@ from random import randint
 
 from pydantic_ai import Agent
 from pydantic_ai.messages import ModelMessage, ModelResponse, ModelRequest, UserPromptPart, TextPart
-from pydantic_ai.models.groq import GroqModel, GroqModelSettings, GroqModelName
-from pydantic_ai.providers.groq import GroqProvider
+from pydantic_ai.models.openai import OpenAIModel, OpenAIModelSettings, OpenAIModelName
+from pydantic_ai.providers.openai import OpenAIProvider
 from tavily import AsyncTavilyClient
 
 from dotenv import load_dotenv
 
 load_dotenv()
 
-model_name : GroqModelName = "llama-3.3-70b-versatile"
+model_name : OpenAIModelName = "chatgpt-4o-latest"
 
-model = GroqModel(
+model = OpenAIModel(
     model_name = model_name,
-    provider= GroqProvider(api_key=os.getenv("GROQ_API_KEY"))
+    provider= OpenAIProvider(api_key=os.getenv("OPENAI_API_KEY"))
 )
 
-settings = GroqModelSettings(temperature=0.5)
+settings = OpenAIModelSettings(temperature=0.5)
 
 with open("prompt.txt", "r") as file:
     prompt = file.read()

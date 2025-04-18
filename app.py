@@ -23,7 +23,8 @@ def display_messages():
 async def get_bot_response(user_input: str, bin_con : BinaryContent):
     try:
         # Run the agent to get the bot's response
-        response = await agent.run(user_prompt=user_input, message_history=messages, deps=Deps)
+        input = [user_input,bin_con]
+        response = await agent.run(user_prompt=input, message_history=messages, deps=Deps)
         return response.output
     except Exception as e:
         return f"An error occurred: {str(e)}"
