@@ -20,7 +20,7 @@ def display_messages():
             st.write(message["content"])
 
 # Function to handle user input and get bot response
-async def get_bot_response(user_input: str, bin_con : BinaryContent):
+async def get_bot_response(user_input: str, bin_con : BinaryContent|str):
     try:
         # Run the agent to get the bot's response
         input = [user_input,bin_con]
@@ -36,7 +36,7 @@ os.makedirs("images", exist_ok=True)
 uploaded_file = st.file_uploader("Upload an image (e-waste related)", type=["png", "jpg", "jpeg"])
 
 # Initialize BinaryContent variable
-bin_con = None
+bin_con = ""
 
 if uploaded_file is not None:
     # Create a unique filename using timestamp
